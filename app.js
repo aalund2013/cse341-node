@@ -1,13 +1,11 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
 
 app.get('/', function (req, res) {
    res.send('Traci Burgess');
 })
 
-var server = app.listen(8081, function () {
-   var host = server.address().address
-   var port = server.address().port
-   
-   console.log("Example app listening at http://%s:%s", host, port)
+app.listen(port, function () {
+  console.log('Running on port ${port}')
 })
