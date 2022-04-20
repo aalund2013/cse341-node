@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "name": "node_prj1",
+  "version": "1.0.0",
+  "description": "New Node Project, class assignment 1",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aalund2013/cse341-node.git"
+  },
+  "keywords": [
+    "Assignment",
+    "1",
+    "Personal",
+    "Assignment"
+  ],
+  "author": "Adrianna Lund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aalund2013/cse341-node/issues"
+  },
+  "homepage": "https://github.com/aalund2013/cse341-node#readme"
+}
