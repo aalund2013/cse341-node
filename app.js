@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./db/connection');
-const contactsRoutes = require('./routes/contacts');
+// const contactsRoutes = require('./routes/contacts');
 
 const port = process.env.PORT || 8080;
 const app = express();

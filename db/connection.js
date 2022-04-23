@@ -13,7 +13,7 @@ const initDb = (callback) => {
     .then((client) => {
       _db = client;
       callback(null, _db);
-    })
+    console.log('Db connected!')})
     .catch((err) => {
       callback(err);
     });
