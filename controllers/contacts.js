@@ -17,4 +17,7 @@ const get_contact = async (req, res, next) => {
   });
 };
 
-module.exports = { getData };
+module.exports = { 
+    get_contacts,
+    get_contact
+};
