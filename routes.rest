@@ -1,1 +1,20 @@
-GET http://localhost:8080/contacts
+GET http://localhost:8080/contacts;
+###
+
+GET http://localhost:8080/contacts/6263747c291ad11075d3cc2d
+###
+GET http://localhost:8080/contacts/6263754f291ad11075d3cc2e
+###
+GET http://localhost:8080/contacts/6263761b291ad11075d3cc30
+###
+
+GET https://evening-shelf-20122.herokuapp.com/contacts
+###
+
+GET https://evening-shelf-20122.herokuapp.com/6263747c291ad11075d3cc2d
+
+###
+GET https://evening-shelf-20122.herokuapp.com/6263754f291ad11075d3cc2e
+
+###
+GET https://evening-shelf-20122.herokuapp.com/6263761b291ad11075d3cc30
