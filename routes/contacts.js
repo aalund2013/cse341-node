@@ -1,8 +1,7 @@
 'use strict'
-const express = require('express');
+// const express = require('express');
 var contacts = require('../controllers/contacts');
-var router = express.Router();
-const app = express;
+var router = require('express').Router();
 
 // route for all contacts
 
