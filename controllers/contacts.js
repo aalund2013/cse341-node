@@ -1,20 +1,21 @@
+const {ObjectId} = require('mongodb')
 'use strict';
 const mongodb = require('../db/connection');
 
 const get_contacts = async (req, res) => {
-    const result = await mongodb.getDb('Data').collection('Contacts');
-    result.toArray().then((lists) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(lists);
-    });
+    const client = mongodb.getDb();
+    const result = await client.db('Data').collection('Contacts').find();
+    const contacts = await result.toArray()
+    return res.json(contacts);
+    // result.toArray().then((lists) => {    });
 };
 
-const get_contact = async (req, res, next) => {
-  const result = await mongodb.getDb().db('Data').collection('Contacts').find();
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0]); // we just need the first one (the only one)
-  });
+const get_contact = async (req, res) => {
+    const {contactId} = req.params
+    console.log(contactId)
+    const client = mongodb.getDb();
+    const result = await client.db('Data').collection('Contacts').findOne({"_id": new ObjectId(contactId)});
+    return res.json(result);
 };
 
 module.exports = { 
