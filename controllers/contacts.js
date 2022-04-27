@@ -1,6 +1,4 @@
-const {ObjectId} = require('mongodb')
 const Contacts = require('../models/contacts')
-const mongodb = require('../db/connection');
 
 const get_contacts = async (req, res) => {
     try{

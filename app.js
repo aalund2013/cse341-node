@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-require('dotenv/config');
 const contactRoute = require('./routes/contacts');
+require('dotenv/config');
 
 const port = process.env.PORT || 8080;
 const app = express();

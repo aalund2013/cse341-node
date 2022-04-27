@@ -1,4 +1,3 @@
-// const Contact = require('../models/Contacts');
 var contacts = require('../controllers/contacts');
 var router = require('express').Router();
 
