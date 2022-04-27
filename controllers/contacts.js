@@ -1,5 +1,4 @@
 const {ObjectId} = require('mongodb')
-'use strict';
 const mongodb = require('../db/connection');
 
 const get_contacts = async (req, res) => {

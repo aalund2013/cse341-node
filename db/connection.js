@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
+
 dotenv.config();
-const MongoClient = require('mongodb').MongoClient;
+const { MongoClient } = require('mongodb');
 
 let _db;
 
@@ -13,7 +14,8 @@ const initDb = (callback) => {
     .then((client) => {
       _db = client;
       callback(null, _db);
-    console.log('Db connected!')})
+      console.log('Db connected!');
+    })
     .catch((err) => {
       callback(err);
     });
