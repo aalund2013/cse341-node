@@ -1,5 +1,6 @@
 const Contacts = require('../models/contacts')
 
+
 const get_contacts = async (req, res) => {
     try{
         const contacts = await Contacts.find();
@@ -18,7 +19,16 @@ const get_contact = async (req, res) => {
     };
 };
 
+const add_contact = async (req, res) => {
+    try{
+        console.log(req.body)
+    } catch(err){
+        res.json({message:err});
+    };
+};
+
 module.exports = { 
     get_contacts,
-    get_contact
+    get_contact,
+    add_contact
 };

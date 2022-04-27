@@ -9,6 +9,9 @@ router.get("/", contacts.get_contacts);
 // route for single contact - by id   
 router.get("/:contactId",contacts.get_contact);
 
+// route to create new contact
+router.post("/", contacts.add_contact);
+
 module.exports = router;
 
 
