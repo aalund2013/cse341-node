@@ -13,7 +13,10 @@ router.get("/:contactId",contacts.get_contact);
 router.post("/", contacts.add_contact);
 
 // route for update contact
-router.put("/", contacts.update_contact);
+router.patch("/:contactId", contacts.update_contact);
+
+// route to delete contact
+router.delete("/:contactId", contacts.delete_contact);
 
 module.exports = router;
 
