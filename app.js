@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
-});
+})
+;
 
 mongoose.connect(
   process.env.MONGODB_URI,{ UseNewUrlParser: true },
