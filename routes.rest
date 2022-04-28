@@ -39,8 +39,16 @@ PATCH http://localhost:8080/contacts/6263747c291ad11075d3cc2d HTTP/1.1
 content-type: application/json
 
 {
-    "favoriteColor":"greige"
+    "favoriteColor":"orange"
 }
 
 ###
 DELETE http://localhost:8080/contacts/6263747c291ad11075d3cc2d
+
+###
+PATCH https://evening-shelf-20122.herokuapp.com/6263761b291ad11075d3cc30 HTTP/1.1
+content-type: application/json
+
+{
+    "email":"newEMAIL@emails.com"
+}
