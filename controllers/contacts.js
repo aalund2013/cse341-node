@@ -69,6 +69,40 @@ const update_contact = async (req, res) => {
     }
 };
 
+const put_contact = async (req, res) => {
+    try{
+        // const contactId = new ObjectId(req.params.contactId);
+        const contact = await Contacts.findById(req.params.contactId);
+
+        if (req.body.firstName) {
+            contact.firstName = req.body.firstName
+        };
+
+        if (req.body.lastName) {
+            contact.lastName = req.body.lastName
+        };
+
+        if (req.body.email) {
+            contact.email = req.body.email
+        };
+
+        if (req.body.favoriteColor) {
+            contact.favoriteColor = req.body.favoriteColor
+        };
+
+        if (req.body.birthday) {
+            contact.birthday = req.body.birthday
+        };
+
+        await contact.save();
+        res.send(contact);
+
+    } catch {
+        res.status(404);
+        res.send({ error: "Contact doesn't exist." });
+    }
+};
+
 const delete_contact = async (req, res) => {
     try {
         const removedContact = await Contacts.deleteOne({_id: req.params.contactId});
@@ -83,5 +117,6 @@ module.exports = {
     get_contact,
     add_contact,
     update_contact,
-    delete_contact
+    delete_contact,
+    put_contact
 };

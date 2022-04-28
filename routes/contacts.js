@@ -15,6 +15,9 @@ router.post("/", contacts.add_contact);
 // route for update contact
 router.patch("/:contactId", contacts.update_contact);
 
+// route for put
+router.put("/:contactId", contacts.put_contact);
+
 // route to delete contact
 router.delete("/:contactId", contacts.delete_contact);
 
