@@ -11,13 +11,13 @@ GET http://localhost:8080/contacts/6263761b291ad11075d3cc30
 GET https://evening-shelf-20122.herokuapp.com/contacts
 ###
 
-GET https://evening-shelf-20122.herokuapp.com/6263747c291ad11075d3cc2d
+GET https://evening-shelf-20122.herokuapp.com/contacts/6263747c291ad11075d3cc2d
 
 ###
-GET https://evening-shelf-20122.herokuapp.com/6263754f291ad11075d3cc2e
+GET https://evening-shelf-20122.herokuapp.com/contacts/6263754f291ad11075d3cc2e
 
 ###
-GET https://evening-shelf-20122.herokuapp.com/6263761b291ad11075d3cc30
+GET https://evening-shelf-20122.herokuapp.com/contacts/6263761b291ad11075d3cc30
 
 
 
@@ -46,9 +46,24 @@ content-type: application/json
 DELETE http://localhost:8080/contacts/6263747c291ad11075d3cc2d
 
 ###
-PATCH https://evening-shelf-20122.herokuapp.com/6263761b291ad11075d3cc30 HTTP/1.1
+PATCH https://evening-shelf-20122.herokuapp.com/contacts/6263761b291ad11075d3cc30 HTTP/1.1
 content-type: application/json
 
 {
     "email":"newEMAIL@emails.com"
+}
+
+###
+DELETE https://evening-shelf-20122.herokuapp.com/contacts/6263761b291ad11075d3cc30
+
+###
+POST https://evening-shelf-20122.herokuapp.com/contacts/ HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Josh",
+    "lastName": "Egbert",
+    "email":"je@mymail.me",
+    "favoriteColor":"avacado green",
+    "birthday":"03-22-1993"
 }
