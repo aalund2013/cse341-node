@@ -19,7 +19,6 @@ const get_contact = async (req, res) => {
 };
 
 const add_contact = async (req, res) => {
-        console.log(req.body)
         const contact = new Contacts({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
@@ -27,16 +26,9 @@ const add_contact = async (req, res) => {
             favoriteColor: req.body.favoriteColor,
             birthday: req.body.birthday
         });
-        console.log(contact)
-    //     contact.save()
-    //     .exec()
-    //     .then(data => {
-    //         res.json(data);
-    //     })
-    // .catch(err => {
-
-    // })
-};
+        NewContact = await contact.save();
+        res.json(NewContact);
+    };
 
 module.exports = { 
     get_contacts,
