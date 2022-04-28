@@ -12,6 +12,9 @@ router.get("/:contactId",contacts.get_contact);
 // route to create new contact
 router.post("/", contacts.add_contact);
 
+// route for update contact
+router.put("/", contacts.update_contact);
+
 module.exports = router;
 
 

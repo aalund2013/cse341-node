@@ -26,12 +26,21 @@ const add_contact = async (req, res) => {
             favoriteColor: req.body.favoriteColor,
             birthday: req.body.birthday
         });
-        NewContact = await contact.save();
-        res.json(NewContact);
+        try {
+            NewContact = await contact.save();
+            res.json(NewContact);
+        } catch (err) {
+            res.json({ message: err });
+        }
     };
+
+const update_contact = async (req, res) => {
+
+};
 
 module.exports = { 
     get_contacts,
     get_contact,
-    add_contact
+    add_contact,
+    update_contact
 };
