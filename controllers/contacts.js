@@ -62,7 +62,7 @@ const update_contact = async (req, res) => {
         if (req.body.birthday) {
             contact.birthday = req.body.birthday
         };
-        
+
         if (req.body.eyeColor) {
             contact.eyeColor = req.body.eyeColor
         };
@@ -86,7 +86,6 @@ const update_contact = async (req, res) => {
 
 const put_contact = async (req, res) => {
     try{
-        // const contactId = new ObjectId(req.params.contactId);
         const contact = await Contacts.findById(req.params.contactId);
 
         if (req.body.firstName) {

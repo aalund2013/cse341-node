@@ -84,7 +84,7 @@ content-type: application/json
     "email":"je@mymail.me",
     "favoriteColor":"BYU Blue",
     "birthday":"03-22-1993",
-    "eyeColor":"brown",
-    "hairColor":"blonde",
-    "residesIn":"Twin Falls, ID"
+    "eyeColor":"Hazel",
+    "hairColor":"Blonde",
+    "residesIn":"Jerome, ID"
 }
