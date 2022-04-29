@@ -20,6 +20,18 @@ const ContactSchema = mongoose.Schema({
   birthday: {
     type: Date,
     required: true
+  },
+  eyeColor: {
+    type: String,
+    required: true
+  },
+  hairColor: {
+    type: String,
+    required: true
+  },
+  residesIn: {
+    type: String,
+    required: true
   }
 });
 

@@ -25,7 +25,10 @@ const add_contact = async (req, res) => {
             lastName: req.body.lastName,
             email: req.body.email,
             favoriteColor: req.body.favoriteColor,
-            birthday: req.body.birthday
+            birthday: req.body.birthday,
+            eyeColor: req.body.eyeColor,
+            hairColor: req.body.hairColor,
+            residesIn: req.body.residesIn
         });
         try {
             const newContact = await contact.save();
@@ -58,6 +61,18 @@ const update_contact = async (req, res) => {
 
         if (req.body.birthday) {
             contact.birthday = req.body.birthday
+        };
+        
+        if (req.body.eyeColor) {
+            contact.eyeColor = req.body.eyeColor
+        };
+
+        if (req.body.hairColor) {
+            contact.hairColor = req.body.hairColor
+        };
+
+        if (req.body.residesIn) {
+            contact.residesIn = req.body.residesIn
         };
 
         await contact.save();
@@ -92,6 +107,18 @@ const put_contact = async (req, res) => {
 
         if (req.body.birthday) {
             contact.birthday = req.body.birthday
+        };
+
+        if (req.body.eyeColor) {
+            contact.eyeColor = req.body.eyeColor
+        };
+
+        if (req.body.hairColor) {
+            contact.hairColor = req.body.hairColor
+        };
+
+        if (req.body.residesIn) {
+            contact.residesIn = req.body.residesIn
         };
 
         await contact.save();

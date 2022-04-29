@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const contactRoute = require('./routes/contacts');
+const swaggerUi = require('swagger-ui-express');
+const docRoute = require('./routes/api-docs');
 require('dotenv/config');
 
 const port = process.env.PORT || 8080;
@@ -14,6 +16,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use('/contacts', contactRoute);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(docRoute));
 
 mongoose.connect(
   process.env.MONGODB_URI,{ UseNewUrlParser: true },
