@@ -67,3 +67,15 @@ content-type: application/json
     "favoriteColor":"avacado green",
     "birthday":"03-22-1993"
 }
+
+###
+PUT https://evening-shelf-20122.herokuapp.com/contacts/626ac292e7d097177ed2ca9c HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Joshua",
+    "lastName": "Egbert",
+    "email":"je@mymail.me",
+    "favoriteColor":"lime green",
+    "birthday":"03-22-1993"
+}
