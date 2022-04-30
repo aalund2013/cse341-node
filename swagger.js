@@ -5,7 +5,7 @@ const doc = {
     title: 'Contacts API',
     description: 'A list of my contacts',
   },
-  host: 'https://evening-shelf-20122.herokuapp.com/',
+  host: 'evening-shelf-20122.herokuapp.com/',
   // 'localhost:8080',
   schemes: ['http'],
 };
