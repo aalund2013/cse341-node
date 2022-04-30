@@ -5,7 +5,7 @@
     "description": "A list of my contacts",
     "version": "1.0.0"
   },
-  "host": "process.env.PORT",
+  "host": "https://evening-shelf-20122.herokuapp.com/",
   "basePath": "/",
   "schemes": [
     "http"
