@@ -5,7 +5,8 @@ const doc = {
     title: 'Contacts API',
     description: 'A list of my contacts',
   },
-  host: 'localhost:8080',
+  host: process.env.PORT,
+  // 'localhost:8080',
   schemes: ['http'],
 };
 
